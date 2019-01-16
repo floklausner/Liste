@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Liste</title>
+  </head>
+
+  <body>
+
+    <h1>Liste</h1>
+    <h3>Melden Sie sich jetzt für einen GayPorn-Premium Account an!!!</h3>
+
+    <ul id="left">
+        <li onclick="changecolor(this)">Michael Jordan</li>
+        <li onclick="changecolor(this)">Magdalena Scholz</li>
+        <li onclick="changecolor(this)">Meris Besic</li>
+        <li onclick="changecolor(this)">Tobias Höfler</li>
+        <li onclick="changecolor(this)">Florian Klausner</li>
+        <li onclick="changecolor(this)">Sebastian Scholl</li>
+        <li onclick="changecolor(this)">Jakob Fitzinger</li>
+        <li onclick="changecolor(this)">Jonas Wiesinger</li>
+        <li onclick="changecolor(this)">Jakob Ratzenböck</li>
+        <li onclick="changecolor(this)">Adrian Moser</li>
+        <li onclick="changecolor(this)">Silvio Kalinke</li>
+    </ul>
+
+      <div class="buttons">
+          <div class="buttonLeft">
+              <button onclick="moveleft()" id="moveLeft">Abmelden</button>
+          </div>
+
+          <div class="buttonRight">
+              <button onclick="moveright()" id="moveRight">Anmelden</button>
+          </div>
+      </div>
+
+    <ul id="right"></ul>
+
+      <script>
+          let leftlist = document.getElementById("left");
+          let rightlist = document.getElementById("right");
+          let buttonright = document.getElementById("moveright");
+          let buttonleft = document.getElementById("moveleft");
+
+          buttonright.addEventListener("click", moveright());
+          buttonleft.addEventListener("click", moveleft());
+
+          function moveright() {
+              for (let i = 1; i < leftlist.childNodes.length; i += 2) {
+                  if(leftlist.childNodes[i].style.backgroundColor == "lightblue") {
+                      leftlist.childNodes[i].style.backgroundColor = "dodgerblue";
+                      rightlist.appendChild(leftlist.childNodes[i - 1]);
+                      rightlist.appendChild(leftlist.childNodes[i - 1]);
+                      i -= 2;
+                  }
+              }
+          }
+
+          function moveleft() {
+              for (let i = 1; i < rightlist.childNodes.length; i += 2) {
+                  if(rightlist.childNodes[i].style.backgroundColor == "lightblue") {
+                      rightlist.childNodes[i].style.backgroundColor = "dodgerblue";
+                      leftlist.appendChild(rightlist.childNodes[i - 1]);
+                      leftlist.appendChild(rightlist.childNodes[i - 1]);
+                      i -= 2;
+                  }
+              }
+          }
+
+          function changecolor(element) {
+              if(element.style.backgroundColor == "lightblue"){
+                  element.style.backgroundColor = "dodgerblue ";
+              } else {
+                   element.style.backgroundColor = "lightblue";
+              }
+          }
+
+      </script>
+  </body>
+</html>

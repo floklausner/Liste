@@ -1,0 +1,39 @@
+h1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+h3 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+body {
+  font-family: monospace;
+  font-size: 150%;
+  background: url('../images/hintergrund.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  background-color: grey;
+  padding: 1%;
+}
+
+#left {
+  width: 49%;
+  height: 50%;
+  float: left;
+  margin: 1%;
+}
+
+#right {
+  width: 49%;
+  height: 50%;
+  float: left;
+  margin: 1%;
+}

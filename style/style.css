@@ -1,0 +1,79 @@
+h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+h3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+body {
+    font-family: monospace;
+    font-size: 180%;
+    background: url('../images/hintergrund.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    opacity: 1;
+    padding: 1%;
+    padding: 2%;
+}
+
+li {
+    border: 1px solid black;
+    padding: 0.5%;
+    border-radius: 3%;
+    text-align: center;
+    background-color: dodgerblue;
+}
+
+#left {
+    position: absolute;
+    width: 22%;
+    height: 45%;
+    top: 25%;
+    left: 20%;
+}
+
+#right {
+    position: absolute;
+    width: 22%;
+    height: 45%;
+    top: 25%;
+    right: 20%;
+}
+
+button {
+    color: white;
+    background-color: dodgerblue; 
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonLeft {
+    margin-right: 2%;
+}
+
+.buttonRight {
+    margin-left: 2%; 
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 35%;
+}
